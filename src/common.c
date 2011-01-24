@@ -22,3 +22,11 @@ u16int inw(u16int port)
    asm volatile ("inw %1, %0" : "=a" (ret) : "dN" (port));
    return ret;
 }
+
+void memset(void *addr, u32int value, u32int size) {
+	u8int v = (u8int) value;
+	void *limit = addr + size;
+	while (addr < limit) {
+		*((u8int *)addr++) = value;
+	}
+}
