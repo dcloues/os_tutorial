@@ -121,4 +121,44 @@ void monitor_write(char *c)
    }
 }
 
+void monitor_write_dec(int n) {
+	if (n < 0) {
+		monitor_put('-');
+		n = n * -1;
+	}
 
+	int div = 10;
+	int places = 1;
+
+	while (div <= n) {
+		places++;
+		div *= 10;
+	}
+
+	int this_place = 0;
+	char *b = "0";
+	while (places--) {
+		div /= 10;
+		this_place = n / div;
+		b[0] = '0' + this_place;
+		//monitor_write(b);
+		monitor_put('0' + this_place);
+		n = n % div;
+	}
+}
+
+void monitor_write_hex(u32int h) {
+	static char lookup[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+	monitor_write("0x");
+	int places = 1;
+	int offset = 28;
+	while (offset > 0 && ((h >> offset) & 0xF) == 0) {
+		offset -= 4;
+	}
+
+	//while (offset >= 0) {
+	do {
+		monitor_put(lookup[(h >> offset) & 0xF]);
+		offset -= 4;
+	} while (offset > -4);
+}
