@@ -1,0 +1,151 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ASFLAGS	Makefile	/^ASFLAGS=-felf$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-nostdlib -nostdinc -fno-builtin -fno-stack-protector -march=i386 -m32$/;"	m
+COMMON_H	common.h	5;"	d
+ISR_ERRCODE	interrupt.s	/^ISR_ERRCODE   10$/;"	l
+ISR_ERRCODE	interrupt.s	/^ISR_ERRCODE   11$/;"	l
+ISR_ERRCODE	interrupt.s	/^ISR_ERRCODE   12$/;"	l
+ISR_ERRCODE	interrupt.s	/^ISR_ERRCODE   13$/;"	l
+ISR_ERRCODE	interrupt.s	/^ISR_ERRCODE   14$/;"	l
+ISR_ERRCODE	interrupt.s	/^ISR_ERRCODE   8$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 0$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 1$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 15$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 16$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 17$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 18$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 19$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 2$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 20$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 21$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 22$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 23$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 24$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 25$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 26$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 27$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 28$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 29$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 3$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 30$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 31$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 4$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 5$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 6$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 7$/;"	l
+ISR_NOERRCODE	interrupt.s	/^ISR_NOERRCODE 9$/;"	l
+LDFLAGS	Makefile	/^LDFLAGS=-Tlink.ld -melf_i386$/;"	m
+MBOOT_CHECKSUM	boot.s	/^MBOOT_CHECKSUM      equ -(MBOOT_HEADER_MAGIC + MBOOT_HEADER_FLAGS)$/;"	d
+MBOOT_HEADER_FLAGS	boot.s	/^MBOOT_HEADER_FLAGS  equ MBOOT_PAGE_ALIGN | MBOOT_MEM_INFO$/;"	d
+MBOOT_HEADER_MAGIC	boot.s	/^MBOOT_HEADER_MAGIC  equ 0x1BADB002 ; Multiboot Magic value$/;"	d
+MBOOT_MEM_INFO	boot.s	/^MBOOT_MEM_INFO      equ 1<<1    ; Provide your kernel with memory info$/;"	d
+MBOOT_PAGE_ALIGN	boot.s	/^MBOOT_PAGE_ALIGN    equ 1<<0    ; Load kernel and modules on a page boundary$/;"	d
+MONITOR_H	monitor.h	5;"	d
+PAGING_H	paging.h	2;"	d
+SOURCES	Makefile	/^SOURCES=boot.o gdt.o interrupt.o isr.o descriptor_tables.o main.o common.o monitor.o$/;"	m
+access	descriptor_tables.h	/^	u8int access;$/;"	m	struct:gdt_entry_struct
+accessed	paging.h	/^   u32int accessed   : 1;   \/\/ Has the page been accessed since last refresh?$/;"	m	struct:page
+always0	descriptor_tables.h	/^	u8int always0;$/;"	m	struct:idt_entry_struct
+base	descriptor_tables.h	/^	u32int base;$/;"	m	struct:gdt_ptr_struct
+base	descriptor_tables.h	/^	u32int base;$/;"	m	struct:idt_ptr_struct
+base_hi	descriptor_tables.h	/^	u16int base_hi;$/;"	m	struct:idt_entry_struct
+base_high	descriptor_tables.h	/^	u8int base_high;$/;"	m	struct:gdt_entry_struct
+base_lo	descriptor_tables.h	/^	u16int base_lo;$/;"	m	struct:idt_entry_struct
+base_low	descriptor_tables.h	/^	u16int base_low;$/;"	m	struct:gdt_entry_struct
+base_middle	descriptor_tables.h	/^	u8int base_middle;$/;"	m	struct:gdt_entry_struct
+cs	isr.h	/^    u32int eip, cs, eflags, useresp, ss; \/\/ Pushed by the processor automatically.$/;"	m	struct:registers
+cursor_x	monitor.c	/^u8int cursor_x = 0;$/;"	v
+cursor_y	monitor.c	/^u8int cursor_y = 0;$/;"	v
+dirty	paging.h	/^   u32int dirty      : 1;   \/\/ Has the page been written to since last refresh?$/;"	m	struct:page
+ds	isr.h	/^    u32int ds;                  \/\/ Data segment selector$/;"	m	struct:registers
+eax	isr.h	/^    u32int edi, esi, ebp, esp, ebx, edx, ecx, eax; \/\/ Pushed by pusha.$/;"	m	struct:registers
+ebp	isr.h	/^    u32int edi, esi, ebp, esp, ebx, edx, ecx, eax; \/\/ Pushed by pusha.$/;"	m	struct:registers
+ebx	isr.h	/^    u32int edi, esi, ebp, esp, ebx, edx, ecx, eax; \/\/ Pushed by pusha.$/;"	m	struct:registers
+ecx	isr.h	/^    u32int edi, esi, ebp, esp, ebx, edx, ecx, eax; \/\/ Pushed by pusha.$/;"	m	struct:registers
+edi	isr.h	/^    u32int edi, esi, ebp, esp, ebx, edx, ecx, eax; \/\/ Pushed by pusha.$/;"	m	struct:registers
+edx	isr.h	/^    u32int edi, esi, ebp, esp, ebx, edx, ecx, eax; \/\/ Pushed by pusha.$/;"	m	struct:registers
+eflags	isr.h	/^    u32int eip, cs, eflags, useresp, ss; \/\/ Pushed by the processor automatically.$/;"	m	struct:registers
+eip	isr.h	/^    u32int eip, cs, eflags, useresp, ss; \/\/ Pushed by the processor automatically.$/;"	m	struct:registers
+err_code	isr.h	/^    u32int int_no, err_code;    \/\/ Interrupt number and error code (if applicable)$/;"	m	struct:registers
+esi	isr.h	/^    u32int edi, esi, ebp, esp, ebx, edx, ecx, eax; \/\/ Pushed by pusha.$/;"	m	struct:registers
+esp	isr.h	/^    u32int edi, esi, ebp, esp, ebx, edx, ecx, eax; \/\/ Pushed by pusha.$/;"	m	struct:registers
+extern	interrupt.s	/^extern isr_handler$/;"	l
+flags	descriptor_tables.h	/^	u8int flags;$/;"	m	struct:idt_entry_struct
+frame	paging.h	/^   u32int frame      : 20;  \/\/ Frame address (shifted right 12 bits)$/;"	m	struct:page
+gdt_entries	descriptor_tables.c	/^gdt_entry_t gdt_entries[5];$/;"	v
+gdt_entry_struct	descriptor_tables.h	/^struct gdt_entry_struct {$/;"	s
+gdt_entry_t	descriptor_tables.h	/^typedef struct gdt_entry_struct gdt_entry_t;$/;"	t	typeref:struct:gdt_entry_struct
+gdt_flush	gdt.s	/^gdt_flush:$/;"	l
+gdt_ptr	descriptor_tables.c	/^gdt_ptr_t   gdt_ptr;$/;"	v
+gdt_ptr_struct	descriptor_tables.h	/^struct gdt_ptr_struct {$/;"	s
+gdt_ptr_t	descriptor_tables.h	/^typedef struct gdt_ptr_struct gdt_ptr_t;$/;"	t	typeref:struct:gdt_ptr_struct
+gdt_set_gate	descriptor_tables.c	/^static void gdt_set_gate(s32int num, u32int base, u32int limit, u8int access, u8int gran) {$/;"	f	file:
+granularity	descriptor_tables.h	/^	u8int granularity;$/;"	m	struct:gdt_entry_struct
+idt_entries	descriptor_tables.c	/^idt_entry_t idt_entries[256];$/;"	v
+idt_entry_struct	descriptor_tables.h	/^struct idt_entry_struct {$/;"	s
+idt_entry_t	descriptor_tables.h	/^typedef struct idt_entry_struct idt_entry_t;$/;"	t	typeref:struct:idt_entry_struct
+idt_flush	gdt.s	/^idt_flush:$/;"	l
+idt_ptr	descriptor_tables.c	/^idt_ptr_t  idt_ptr;$/;"	v
+idt_ptr_struct	descriptor_tables.h	/^struct idt_ptr_struct {$/;"	s
+idt_ptr_t	descriptor_tables.h	/^typedef struct idt_ptr_struct idt_ptr_t;$/;"	t	typeref:struct:idt_ptr_struct
+idt_set_gate	descriptor_tables.c	/^static void idt_set_gate(u8int num, u32int base, u16int sel, u8int flags) {$/;"	f	file:
+inb	common.c	/^u8int inb(u16int port)$/;"	f
+init_descriptor_tables	descriptor_tables.c	/^void init_descriptor_tables() {$/;"	f
+init_gdt	descriptor_tables.c	/^static void init_gdt() {$/;"	f	file:
+init_idt	descriptor_tables.c	/^static void init_idt() {$/;"	f	file:
+int_no	isr.h	/^    u32int int_no, err_code;    \/\/ Interrupt number and error code (if applicable)$/;"	m	struct:registers
+inw	common.c	/^u16int inw(u16int port)$/;"	f
+isr_common_stub	interrupt.s	/^isr_common_stub:$/;"	l
+isr_handler	isr.c	/^void isr_handler(registers_t regs)$/;"	f
+kmalloc	kheap.c	/^u32int kmalloc(u32int sz)$/;"	f
+kmalloc_a	kheap.c	/^u32int kmalloc_a(u32int sz)$/;"	f
+kmalloc_ap	kheap.c	/^u32int kmalloc_ap(u32int sz, u32int *phys)$/;"	f
+kmalloc_int	kheap.c	/^u32int kmalloc_int(u32int sz, int align, u32int *phys)$/;"	f
+kmalloc_p	kheap.c	/^u32int kmalloc_p(u32int sz, u32int *phys)$/;"	f
+limit	descriptor_tables.h	/^	u16int limit;$/;"	m	struct:gdt_ptr_struct
+limit	descriptor_tables.h	/^	u16int limit;$/;"	m	struct:idt_ptr_struct
+limit_low	descriptor_tables.h	/^	u16int limit_low;$/;"	m	struct:gdt_entry_struct
+main	main.c	/^int main(struct multiboot *mboot_ptr)$/;"	f
+mboot	boot.s	/^mboot:$/;"	l
+memset	common.c	/^void memset(void *addr, u32int value, u32int size) {$/;"	f
+monitor_clear	monitor.c	/^void monitor_clear()$/;"	f
+monitor_put	monitor.c	/^void monitor_put(char c)$/;"	f
+monitor_write	monitor.c	/^void monitor_write(char *c)$/;"	f
+monitor_write_dec	monitor.c	/^void monitor_write_dec(int n) {$/;"	f
+monitor_write_hex	monitor.c	/^void monitor_write_hex(u32int h) {$/;"	f
+move_cursor	monitor.c	/^static void move_cursor() {$/;"	f	file:
+outb	common.c	/^void outb(u16int port, u8int value)$/;"	f
+page	paging.h	/^typedef struct page$/;"	s
+page_directory	paging.h	/^typedef struct page_directory$/;"	s
+page_directory_t	paging.h	/^} page_directory_t;$/;"	t	typeref:struct:page_directory
+page_t	paging.h	/^} page_t;$/;"	t	typeref:struct:page
+page_table	paging.h	/^typedef struct page_table$/;"	s
+page_table_t	paging.h	/^} page_table_t;$/;"	t	typeref:struct:page_table
+pages	paging.h	/^   page_t pages[1024];$/;"	m	struct:page_table
+physicalAddr	paging.h	/^   u32int physicalAddr;$/;"	m	struct:page_directory
+placement_address	kheap.c	/^u32int placement_address = (u32int)&end;$/;"	v
+present	paging.h	/^   u32int present    : 1;   \/\/ Page present in memory$/;"	m	struct:page
+registers	isr.h	/^typedef struct registers$/;"	s
+registers_t	isr.h	/^} registers_t;$/;"	t	typeref:struct:registers
+rw	paging.h	/^   u32int rw         : 1;   \/\/ Read-only if clear, readwrite if set$/;"	m	struct:page
+s16int	common.h	/^typedef          short s16int;$/;"	t
+s32int	common.h	/^typedef          int   s32int;$/;"	t
+s8int	common.h	/^typedef          char  s8int;$/;"	t
+scroll	monitor.c	/^static void scroll() {$/;"	f	file:
+sel	descriptor_tables.h	/^	u16int sel;$/;"	m	struct:idt_entry_struct
+ss	isr.h	/^    u32int eip, cs, eflags, useresp, ss; \/\/ Pushed by the processor automatically.$/;"	m	struct:registers
+start	boot.s	/^start:$/;"	l
+tables	paging.h	/^   page_table_t *tables[1024];$/;"	m	struct:page_directory
+tablesPhysical	paging.h	/^   u32int tablesPhysical[1024];$/;"	m	struct:page_directory
+u16int	common.h	/^typedef unsigned short u16int;$/;"	t
+u32int	common.h	/^typedef unsigned int   u32int;$/;"	t
+u8int	common.h	/^typedef unsigned char  u8int;$/;"	t
+unused	paging.h	/^   u32int unused     : 7;   \/\/ Amalgamation of unused and reserved bits$/;"	m	struct:page
+user	paging.h	/^   u32int user       : 1;   \/\/ Supervisor level only if clear$/;"	m	struct:page
+useresp	isr.h	/^    u32int eip, cs, eflags, useresp, ss; \/\/ Pushed by the processor automatically.$/;"	m	struct:registers
+video_memory	monitor.c	/^u16int *video_memory = (u16int *)0xB8000;$/;"	v
